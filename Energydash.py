@@ -1,5 +1,6 @@
-import pandas as pd
 import streamlit as st
+import pandas as pd
+
 
 # Data for Canadian provinces and US states with codes
 province_data = {
