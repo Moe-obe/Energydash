@@ -110,56 +110,5 @@ elif st.session_state.tab == "Timeline":
 
 
 
-    # Timeline data (keeping the same data from before)
-    timeline_data = [
-        {"year": "2024", "event": "2024 International Building Code (IBC)\nStricter safety requirements for glazing systems."},
-        {"year": "2025", "event": "ASHRAE 90.1 (2025 Edition)\nStricter energy efficiency requirements for building envelopes, HVAC systems, and glazing."},
-        {"year": "2025", "event": "California Energy Code (2025 Update)\nStricter energy performance standards for glazing and windows."},
-        {"year": "2026", "event": "Energy Performance of Buildings Directive (EPBD)\nEU aiming for nearly zero-energy buildings."},
-        {"year": "2026", "event": "United States Investment Tax Credit (ITC)\nExpansion of tax credits for high-performance glass."},
-        {"year": "2030", "event": "2030 Climate Challenge (RIBA Standards)\nAmbitious goals for reducing carbon emissions and energy consumption."}
-    ]
-
-    # Convert the timeline data into a pandas DataFrame
-    timeline_df = pd.DataFrame(timeline_data)
-    timeline_df['year'] = pd.to_datetime(timeline_df['year'], format='%Y')  # Convert years to datetime for plotting
-
-    # New Timeline Graph for the "Upcoming Codes Timeline" tab
-    
-
-    # Plot the timeline
-    with plt.style.context("fivethirtyeight"):
-        fig, ax = plt.subplots(figsize=(30, 18))
-        fig.patch.set_alpha(0)  # Make the figure background transparent
-        ax.patch.set_alpha(0)   # Make the axis background transparent
-
-        # Plot the main line for the timeline
-        ax.plot(timeline_df.year, [0] * len(timeline_df), "-o", color="black", markerfacecolor="white")
-
-        # Set the x-ticks with the range of years, manually adjust limits
-        ax.set_xticks(pd.date_range("2024-1-1", "2030-1-1", freq="YS"))
-        ax.set_xlim(pd.to_datetime("2023-06-01"), pd.to_datetime("2031-01-01"))
-        ax.set_ylim(-7, 6)
-
-        # Annotate each event along the timeline
-        for idx in range(len(timeline_df)):
-            dt, event = timeline_df["year"][idx], timeline_df["event"][idx]
-            level = 4 if idx % 2 == 0 else -4  # Alternate placing the event above and below the line
-
-            ax.annotate(event, xy=(dt, 0.2 if level > 0 else -0.2), xytext=(dt, level),
-                        arrowprops=dict(arrowstyle="-", color="red", linewidth=2),
-                        ha="center", fontsize=20, bbox=dict(boxstyle="round,pad=0.3", edgecolor="white", facecolor="white"))
-
-        # Remove unnecessary spines
-        ax.spines[["left", "top", "right", "bottom"]].set_visible(False)
-        ax.spines[["bottom"]].set_position(("axes", 0.5))
-
-        # Hide the y-axis
-        ax.yaxis.set_visible(False)
-
-        # Set the title for the timeline
-        ax.set_title(" ", pad=10, loc="left", fontsize=50, fontweight="bold")
-        ax.grid(False)
-
-        # Display the timeline in Streamlit
-        st.pyplot(fig)
+    # Insert an image instead of the matplotlib chart
+    st.image("path_to_your_image.png", caption="Upcoming Codes Timeline", use_column_width=True)
