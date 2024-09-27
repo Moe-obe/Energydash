@@ -114,4 +114,4 @@ elif st.session_state.tab == "Timeline":
     image_url = "https://raw.githubusercontent.com/Moe-obe/Energydash/5c38f8a9bb003891c73fae11dd29e53c0c36e4d9/Screenshot%202024-09-27%20184704.png"
 
 # Display the image in Streamlit
-    st.image(image_url, caption="Upcoming Codes Timeline", use_column_width=True, width=800)
+    st.image(image_url, caption="Upcoming Codes Timeline", use_column_width=True, width=1300)
