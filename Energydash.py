@@ -111,4 +111,4 @@ elif st.session_state.tab == "Timeline":
 
 
     # Insert an image instead of the matplotlib chart
-    st.image(https://github.com/Moe-obe/Energydash/blob/main/Screenshot%202024-09-27%20184704.png, caption="Upcoming Codes Timeline", use_column_width=True)
+    st.image("https://github.com/Moe-obe/Energydash/blob/main/Screenshot%202024-09-27%20184704.png", caption="Upcoming Codes Timeline", use_column_width=True)
