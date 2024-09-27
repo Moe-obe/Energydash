@@ -110,5 +110,8 @@ elif st.session_state.tab == "Timeline":
 
 
 
-    # Insert an image instead of the matplotlib chart
-    st.image("https://github.com/Moe-obe/Energydash/blob/main/Screenshot%202024-09-27%20184704.png", caption="Upcoming Codes Timeline", use_column_width=True)
+    # Link to the raw image hosted on GitHub
+    image_url = "https://raw.githubusercontent.com/Moe-obe/Energydash/5c38f8a9bb003891c73fae11dd29e53c0c36e4d9/Screenshot%202024-09-27%20184704.png"
+
+# Display the image in Streamlit
+    st.image(image_url, caption="Upcoming Codes Timeline", use_column_width=True)
