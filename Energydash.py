@@ -106,7 +106,7 @@ elif st.session_state.tab == "US":
 
 
 elif st.session_state.tab == "Timeline":
-    st.header("Upcoming Codes Timeline")
+    st.header("Upcoming Important Dates")
 
 
 
