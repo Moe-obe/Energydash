@@ -115,3 +115,13 @@ elif st.session_state.tab == "Timeline":
 
 # Display the image in Streamlit
     st.image(image_url, caption="Upcoming Codes Timeline", width=1300)
+    # Add descriptions and hyperlinks under the timeline image
+    st.markdown("""
+    ### Related References:
+    - [**ASHRAE/IES 90.1-2022 Becomes New National Energy Reference Standard**](https://lightingcontrolsassociation.org/2024/06/20/ddd/#:~:text=ASHRAE%2FIES%2090.1%2D2022%20Becomes%20New%20National%20Energy%20Reference%20Standard,-06%2F20%2F2024&text=In%20March%202024%2C%20the%20U.S.,energy%20over%20the%202019%20version.)
+    - [**2024 International Building Code (IBC)**](https://www.structuremag.org/article/2024-ibc-significant-structural-changes-glass-and-glazing-ibc-chapter-24/)
+    - **ASHRAE 90.1 (2025 Edition)** (link unavailable)
+    - [**California Energy Code (2025 Update)**](https://www.renewableenergymagazine.com/energy_saving/california-adopts-updated-building-standards-expanding-energy-20240912)
+    - [**United States Investment Tax Credit (ITC) for High-Performance Glass**](https://www.glass.org/news/2024/defending-and-promoting-glass-industry)
+    - [**Climate Challenge (RIBA Standards)**](https://www.guardianglass.com/gb/en/insights/a-window-on-the-future-changes-to-part-l-building-regs)
+    """)
